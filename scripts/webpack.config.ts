@@ -17,7 +17,7 @@ export default {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'template/index.html',
-      publicPath: '/',
+      publicPath: '/home/',
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',

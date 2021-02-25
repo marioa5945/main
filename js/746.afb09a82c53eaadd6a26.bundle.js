@@ -1,1 +1,0 @@
-(self.webpackChunkreact_components=self.webpackChunkreact_components||[]).push([[746],{746:(e,n,t)=>{"use strict";t.r(n),t.d(n,{default:()=>r});var a=t(804),c=t.n(a);const r=function(){return c().createElement("div",{className:"UgrcTEXrOi-wpr3NF06w4"},c().createElement("main",null,c().createElement("h1",null,"Mario ",c().createElement("span",null,"a"))))}}}]);

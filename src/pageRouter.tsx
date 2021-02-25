@@ -38,7 +38,10 @@ const loadComponent = (scope: string, module: string, url: string) => async (): 
 
 const HomePage = React.lazy(() => import('./container/home/'));
 const ResumePage = React.lazy(() => import('./container/resume/'));
-const DemosPage = React.lazy(loadComponent('packageLib', './router', `${remoteServer}${isPro ? '/package-library' : ''}/js/remoteEntry.js`));
+const status404Page = React.lazy(() => import('./container/otherStatus/'));
+const DemosPage = React.lazy(loadComponent('packageLib', './router', remotePackageLibrary));
+const BlogPage = React.lazy(loadComponent('blog', './router', remoteBlog));
+
 import Loading from '@components/loading/';
 
 const PageRouter: React.FC = () => {
@@ -50,6 +53,8 @@ const PageRouter: React.FC = () => {
           <Route path={'/home'} component={HomePage} />
           <Route path={'/resume'} component={ResumePage} />
           <Route path={'/demos'} component={DemosPage} />
+          <Route path={'/blog'} component={BlogPage} />
+          <Route component={status404Page} />
         </Switch>
       </Router>
     </Suspense>

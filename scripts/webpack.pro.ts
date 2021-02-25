@@ -23,8 +23,8 @@ config.mode = 'production';
     ],
   }),
   new webpack.DefinePlugin({
-    remoteServer: '"https://marioa5945.github.io"',
-    isPro: true,
+    remoteBlog: '"https://marioa5945.github.io/blog/js/remoteEntry.js"',
+    remotePackageLibrary: '"https://marioa5945.github.io/package-library/js/remoteEntry.js"',
   })
 );
 

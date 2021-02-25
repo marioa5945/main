@@ -9,12 +9,12 @@ declare global {
   }
 
   /**
-   * Remote server url, such as http://localhost:8080
+   * Remote server url of blog
    */
-  declare const remoteServer: string;
+  declare const remoteBlog: string;
 
   /**
-   * Is it a production environment
+   * Remote server url of package library
    */
-  declare const isPro: boolean;
+  declare const remotePackageLibrary: string;
 }

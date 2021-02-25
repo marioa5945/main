@@ -23,7 +23,8 @@ config.mode = 'production';
     ],
   }),
   new webpack.DefinePlugin({
-    remoteServer: '"https://marioa5945.github.io"',
+    remoteServer: '"https://marioa5945.github.io/"',
+    isPro: true,
   })
 );
 

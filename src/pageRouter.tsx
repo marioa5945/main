@@ -38,7 +38,7 @@ const loadComponent = (scope: string, module: string, url: string) => async (): 
 
 const HomePage = React.lazy(() => import('./container/home/'));
 const ResumePage = React.lazy(() => import('./container/resume/'));
-const DemosPage = React.lazy(loadComponent('packageLib', './router', `${remoteServer}/js/remoteEntry.js`));
+const DemosPage = React.lazy(loadComponent('packageLib', './router', `${remoteServer}${isPro ? '/demos' : ''}/js/remoteEntry.js`));
 import Loading from '@components/loading/';
 
 const PageRouter: React.FC = () => {

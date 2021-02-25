@@ -21,6 +21,7 @@ import config from './webpack.config';
   new webpack.HotModuleReplacementPlugin(),
   new webpack.DefinePlugin({
     remoteServer: '"http://localhost:8081"',
+    isPro: false,
   })
 );
 config.entry = ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', './src/app.tsx'];

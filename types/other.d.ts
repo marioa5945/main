@@ -12,4 +12,9 @@ declare global {
    * Remote server url, such as http://localhost:8080
    */
   declare const remoteServer: string;
+
+  /**
+   * Is it a production environment
+   */
+  declare const isPro: boolean;
 }

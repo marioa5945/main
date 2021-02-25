@@ -4,6 +4,7 @@ import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpackConfig from './webpack.server';
+import serverPrint from 'server-print';
 
 const app = express();
 const compiler = webpack(webpackConfig);
@@ -27,6 +28,5 @@ app.use(webpackHotMiddleware(compiler));
 
 const port = (config.server as any).port;
 app.listen(port, function () {
-  console.log(`starting at http://localhost:${port}`);
-  // serverPrint(port);
+  serverPrint(port);
 });

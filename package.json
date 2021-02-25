@@ -6,7 +6,8 @@
   "main": "./src/app.tsx",
   "scripts": {
     "start": "ts-node ./scripts/node.server.ts",
-    "build": "webpack --config ./scripts/webpack.pro.ts"
+    "build": "webpack --config ./scripts/webpack.pro.ts",
+    "sit": "webpack --config ./scripts/webpack.sit.ts"
   },
   "repository": "git@github.com:marioa5945/react-components.git",
   "keywords": [

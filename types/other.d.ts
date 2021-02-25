@@ -7,4 +7,9 @@ declare global {
   declare interface _router {
     history: H.History<H.LocationState>;
   }
+
+  /**
+   * Remote server url, such as http://localhost:8080
+   */
+  declare const remoteServer: string;
 }

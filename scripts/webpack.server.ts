@@ -20,7 +20,7 @@ import config from './webpack.config';
 (config.plugins as any).push(
   new webpack.HotModuleReplacementPlugin(),
   new webpack.DefinePlugin({
-    remoteServer: '"http://localhost:8080/"',
+    remoteServer: '"http://localhost:8081"',
   })
 );
 config.entry = ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', './src/app.tsx'];

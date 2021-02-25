@@ -1,6 +1,6 @@
 # Home
 
-home page of github's personal-websit
+The home page of github's personal-websit
 
 ## Installation
 

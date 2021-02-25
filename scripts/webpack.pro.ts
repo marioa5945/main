@@ -12,8 +12,8 @@ config.mode = 'production';
   exclude: /node-modules/,
   use: ['babel-loader'],
 });
-(config.plugins as any).push(new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }));
 (config.plugins as any).push(
+  new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
   new CopyPlugin({
     patterns: [
       {
@@ -23,7 +23,7 @@ config.mode = 'production';
     ],
   }),
   new webpack.DefinePlugin({
-    remoteServer: '"https://marioa5945.github.io/"',
+    remoteServer: '"https://marioa5945.github.io"',
   })
 );
 

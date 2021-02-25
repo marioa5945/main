@@ -35,6 +35,9 @@ export default {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '/home/',
+            },
           },
           {
             loader: 'css-loader',

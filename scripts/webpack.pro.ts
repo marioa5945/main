@@ -6,6 +6,7 @@ import CopyPlugin from 'copy-webpack-plugin';
 delete config.devtool;
 config.mode = 'production';
 (config.output as any).filename = 'js/[name].[contenthash].bundle.js';
+(config.output as any).publicPath = '/home/';
 (config.module as any).rules.push({
   test: /\.(ts|tsx)$/,
   exclude: /node-modules/,

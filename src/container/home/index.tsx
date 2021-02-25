@@ -35,7 +35,7 @@ const HomePage: React.FC<_router> = (props: _router) => {
           Mario <span>a</span>
         </h1>
         <p>is a programmer</p>
-        <img src="/img/logo.png" />
+        <img src="/home/img/logo.png" />
         <nav>
           {navArr.map((n) =>
             n.url ? (

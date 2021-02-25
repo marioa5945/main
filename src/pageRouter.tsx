@@ -10,7 +10,7 @@ import Loading from '@components/loading/';
 
 const PageRouter: React.FC = () => {
   return (
-    <Suspense fallback={<Loading logoUrl={'/img/logo.png'} />}>
+    <Suspense fallback={<Loading logoUrl={'/home/img/logo.png'} />}>
       <Router history={history}>
         <Switch>
           <Route exact={true} path={'/'} component={HomePage} />

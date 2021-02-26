@@ -1,1 +1,0 @@
-(self.webpackChunkreact_components=self.webpackChunkreact_components||[]).push([[597],{597:(e,n,t)=>{"use strict";t.r(n),t.d(n,{default:()=>l});var c=t(804),a=t.n(c);const l=function(){return a().createElement("div",{className:"TYOLXkwNUSAojQsmGP66B"},a().createElement("h1",null,"404"),a().createElement("h3",null,"File not found"),a().createElement("a",{href:"/"},"black"))}}}]);

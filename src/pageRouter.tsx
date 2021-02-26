@@ -38,7 +38,7 @@ const loadComponent = (scope: string, module: string, url: string) => async (): 
 
 const HomePage = React.lazy(() => import('./container/home/'));
 const AboutPage = React.lazy(() => import('./container/about'));
-const status404Page = React.lazy(() => import('./container/otherStatus/'));
+const status404Page = React.lazy(() => import('./container/otherStatus/status404'));
 const DemosPage = React.lazy(loadComponent('packageLib', './router', remotePackageLibrary));
 const BlogPage = React.lazy(loadComponent('blog', './router', remoteBlog));
 

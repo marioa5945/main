@@ -12,7 +12,7 @@ const compiler = webpack(webpackConfig);
 const config = tomlJson({ fileUrl: './config.toml' });
 
 app.get('*', function (req: any, res: unknown, next: any) {
-  req.url = req.url.replace(/^\/home\//, '/');
+  req.url = req.url.replace(/^\/main\//, '/');
   next();
 });
 

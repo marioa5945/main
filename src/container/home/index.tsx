@@ -19,12 +19,8 @@ const HomePage: React.FC<_router> = (props: _router) => {
       path: '/demos',
     },
     {
-      name: 'twitter',
-      url: 'https://twitter.com/marioa49886908',
-    },
-    {
-      name: 'resume',
-      path: '/resume',
+      name: 'about',
+      path: '/about',
     },
   ];
 
@@ -35,7 +31,7 @@ const HomePage: React.FC<_router> = (props: _router) => {
           Mario <span>a</span>
         </h1>
         <p>is a programmer</p>
-        <img src="/home/img/logo.png" />
+        <img src="./img/logo.png" />
         <nav>
           {navArr.map((n) =>
             n.url ? (

@@ -50,6 +50,6 @@ app.use(
 app.use(webpackHotMiddleware(compiler));
 
 const port = (config.server as any).port;
-app.listen(port, function () {
-  serverPrint(port);
+app.listen(port, () => {
+  serverPrint({ port, copyType: 'localhost' });
 });

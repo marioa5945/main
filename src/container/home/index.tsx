@@ -1,8 +1,8 @@
 import React from 'react';
 import style from './style.scss';
-
-const HomePage: React.FC<_router> = (props: _router) => {
-  const { history } = props;
+import { useNavigate } from 'react-router-dom';
+const HomePage = (): JSX.Element => {
+  const navigate = useNavigate();
 
   const navArr: Array<{ name: string; path?: string; url?: string }> = [
     {
@@ -31,7 +31,7 @@ const HomePage: React.FC<_router> = (props: _router) => {
           Mario <span>a</span>
         </h1>
         <p>is a programmer</p>
-        <img src="./img/logo.png" />
+        <img src={'./img/logo.png'} />
         <nav>
           {navArr.map((n) =>
             n.url ? (
@@ -39,7 +39,7 @@ const HomePage: React.FC<_router> = (props: _router) => {
                 {n.name}
               </a>
             ) : (
-              <a key={n.name} onClick={() => history.push(`/${n.name}`)}>
+              <a key={n.name} onClick={() => navigate(`/${n.name}`)}>
                 {n.name}
               </a>
             )

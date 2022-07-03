@@ -11,18 +11,30 @@ const app = express();
 const compiler = webpack(webpackConfig);
 const config = tomlJson({ fileUrl: './config.toml' });
 
-app.get('*', function (req: any, res: unknown, next: any) {
+app.get('*', (req, res, next) => {
   req.url = req.url.replace(/^\/main\//, '/');
   next();
 });
 
 app.use(express.static('public')); // static
 
+// Blog
 app.use(
-  createProxyMiddleware('/blog/api/', {
-    target: 'http://localhost:8080/',
+  createProxyMiddleware('/blog/', {
+    target: 'http://localhost:9004/',
     pathRewrite: {
-      '^/blog/api/': '/api/', // rewrite path
+      '^/blog/': '/', // rewrite path
+    },
+    changeOrigin: true,
+  })
+);
+
+// Package Library
+app.use(
+  createProxyMiddleware('/package-library/', {
+    target: 'http://localhost:9005/',
+    pathRewrite: {
+      '^/package-library/': '/', // rewrite path
     },
     changeOrigin: true,
   })

@@ -1,13 +1,16 @@
 import React from 'react';
-import { render } from 'react-dom';
-import Router from './pageRouter';
+import * as ReactDOM from 'react-dom/client';
+import { HashRouter } from 'react-router-dom';
 
-render(
-  <React.StrictMode>
-    <Router />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import Router from './pageRouter';
+const domRoot = document.getElementById('root');
+if (domRoot) {
+  ReactDOM.createRoot(domRoot).render(
+    <HashRouter>
+      <Router />
+    </HashRouter>
+  );
+}
 
 if (module.hot) {
   module.hot.accept();

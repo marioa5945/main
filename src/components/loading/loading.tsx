@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './loading-style.scss';
 
-const Loading: React.FC<{ logoUrl: string }> = (props: { logoUrl: string }) => {
+const Loading = (props: { logoUrl: string }) => {
   return (
     <div className={style.loading}>
       <div>

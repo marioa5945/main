@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './style.scss';
 import { useNavigate } from 'react-router-dom';
+
 const HomePage = (): JSX.Element => {
   const navigate = useNavigate();
 
